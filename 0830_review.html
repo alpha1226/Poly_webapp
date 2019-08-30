@@ -15,14 +15,17 @@
             * {margin: 0px; padding: 5px 0px;}
             body {font-size: 14px; width: auto; height: auto; margin: 0 auto;}
             section {width: 80%; float: left; background: #E4F2D0;}
-            aside {width: 20%; float: right; background: #F1DCF2;}
+            aside {width: 20%; float: right; background: #F1DCF2; font-size: 12px; text-align: center;}
             #article1{font-size: 12px; background: silver; margin: 0px 10px;}
             header{background: #085C3C; color: white;}
-            footer {background: #085C3C; color:white; clear: both;}
+            footer {background: #085C3C; color:white; clear: both;text-align: center;}
+            footer h3 {font-size: 11px;}
             nav {background: olivedrab;}
             h1 {font-size: 11px;}
-            h2{font-size: 9px;}
+            h2 {font-size: 9px;}
+            .year-table {text-align: center;}
         </style>
+    
     </head>
     <body>
         <header>
@@ -46,9 +49,9 @@
                         <li>성  명   :</li>
                         <li>생년월일 : </li>
                         <li>주  소   :</li>
-                        <li>연락처   :</li>
+                        <li>연 락 처 :</li>
                         <li>학력 :</li>
-                        <table id="year-table" border="1">
+                        <table class ="year-table" id="year-table" border="1">
                             <thead>
                                 <tr><th>졸업년도</th><th>출신학교</th></tr>
                             </thead>
@@ -61,11 +64,10 @@
                 </article>
             </section>
             <aside>
-                <h3>==aside==</h3>
+                <h3>=aside=</h3>
                 <h3>참조링크</h3>
                 <a href="#"><img class="portal" src="#" alt=" "></a>
                 <a href="#"><img class="portal" src="#" alt=" "></a>
-
                 <a href="#"><img class="portal" src="#" alt=" "></a>
             </aside>
         </div>
