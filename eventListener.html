@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
         <title>이벤트 리스너 속성에 자바스크립트 코드</title>
         <style>
             .img2{width: 200px;}
         </style>
+        <script src="onMouseOver.js"></script>
+        
     </head>
     <body>
         <h3>마우스 올려 보세요</h3>
         <hr>
         <img class="img2"; 
             src="4fd20262-0f34-4b71-a61e-568ff7dfd254.jpg"  alt="이미지"
-            onmouseover="this.src='f6d40dcb-deca-4ac7-8742-903b035d8f20.jpg'"
-            onmouseout="this.src='4fd20262-0f34-4b71-a61e-568ff7dfd254.jpg'">
+            onmouseover="onOver(this)"
+            onmouseout="onOut(this)">
     </body>
-
 </html>
