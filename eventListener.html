@@ -25,4 +25,50 @@
             onmouseover="onOver(this)"
             onmouseout="onOut(this)">
     </body>
+
+    <hr>
+    <script>
+        var x = 100;
+
+        function f(){
+            var x=1;
+
+            document.write("지역변수 x="+x);
+            document.write("<br>");
+            document.write("전역변수 x="+this.x);    
+        }
+        f();
+    </script>
+    <script>
+        document.write("abc" + 23 + "<br>");
+        document.write(23 + "abc" + "<br>");
+        document.write(23 + "35" +"<br>");
+        document.write(23+35 +"<br>");
+        document.write(23 + 35 + "abc" + "<br>");
+        document.write("abe" + 23 +35 + "<br><hr>");
+
+        var name= "kitae";
+        document.write(name== "kitae");
+        document.write("<br>");
+        document.write(name > "park");
+    </script>
+    <h3>if-else를 이용한 학점 매기기</h3>
+    <hr>
+    <script>
+        var grade;
+        var score = prompt("황기태 님 점수를 입력해", 100)
+        score = parseInt(score);
+        if (score >= 90)
+            grade = "A";
+        else if (score >= 80)
+            grade = "B";
+        else if(score>=70)
+            grade ="C";
+            else if(score>=60)
+                grade = "D";
+            else
+                grade = "F";
+        document.write(score +"는"+grade+"입니다.<br>")
+        
+    </script>
 </html>
