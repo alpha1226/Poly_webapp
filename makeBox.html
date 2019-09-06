@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            div {
+                display : inline-block;
+                width : 1px;
+                padding : 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function newColor(){
+                var r = Math.floor(Math.random()*256);
+                var g = Math.floor(Math.random()*256);
+                var b = Math.floor(Math.random()*256);
+                return "rgb("+r+","+g+","+b+")";
+            }
+            function Color(i){
+                return "rgb("+i+","+i+","+i+")";
+            }
+            for(i=0;i<16;i++){
+                var str = "<div style='background-color : ";
+                var color = newColor();
+                str+=color;
+                str += "'>"+color+"</div>";
+                document.write(str);
+            }
+            for(i=0;i<32;i++){
+                for(o=0;o<32;o++){
+                    for(x=0;x<32;x++){ 
+                    var str = "<div style='background-color : ";
+                    var color = Color(i*8);
+                    str+=Color(x);
+                    str += "'>"+Color(x)+"</div>";
+                    document.write(str);
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>

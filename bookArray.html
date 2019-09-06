@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+            var BookArray = new Array();
+            for(i=0;i<5;i++){
+                var input = prompt("콤마(,)로 분히라면서 책제목 저자 가격 순으로 입력","Htm,Kim,20000");
+                var ar= input.split(",");
+                var book = new Object;
+                book.title = ar[0];
+                book.author=ar[1];
+                book.price=ar[2];
+                BookArray[i] = book;
+            }
+
+            for(i=0;i<5;i++){
+                document.write("책제목 : "+BookArray[i].title+"  ");
+                document.write("저자 : "+BookArray[i].author+"  ");
+                document.write("가격 : "+BookArray[i].price+"<br>");
+            }
+
+            document.write("<br><br><br>");
+            for(i=0;i<5;i++){
+                for(o=0;o<i;o++){
+                    if(BookArray[i].price<BookArray[o].price){
+                        var tmp = BookArray[i];
+                        BookArray[i] = BookArray[o];
+                        BookArray[o] = tmp;
+                    }
+                }
+            }
+
+
+            for(i=0;i<5;i++){
+                document.write("책제목 : "+BookArray[i].title+"  ");
+                document.write("저자 : "+BookArray[i].author+"  ");
+                document.write("가격 : "+BookArray[i].price+"<br>");
+            }
+        </script>
+    </body>
+</html>

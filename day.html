@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <script>
+            var week = ["월","화","수","목","금","토","일"];
+            var current = new Date();
+            if(current.getDay()==0){
+                document.body.style.backgroundColor="pink";
+            } else {
+                document.body.style.backgroundColor = "gold";
+            }
+            document.write("오늘 :");
+            document.write(current.getDate()+"일");
+        </script>
+
+    </body>
+</html>

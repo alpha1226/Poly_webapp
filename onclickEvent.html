@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>visibility 프로퍼티</title>
+        <style>
+            span{
+                visibility: hidden;
+                color: blue;
+            }
+        </style>
+        <script>
+            function show(){
+                var objArray = document.getElementsByTagName("span");
+                for(var i=0;i<objArray.length;i++){
+                    var obj = objArray[i];
+                    var style = window.getComputedStyle(obj);
+                    var v = style.getPropertyValue("visibility");
+                    if(v=="hidden"){
+                        obj.style.visibility="visibility";
+                    } else {
+                        obj.style.visibility="hidden";
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h3>
+            다음 빈 곳에 숨어있는 단어?
+        </h3>
+        <button onclick="show();">show/hidden</button>
+        <hr>
+        <ul>
+            <li> i (<span>line</span>) you</li>
+            <li>CSS is Cascding
+                (<span>Style</span>) Sheet
+            </li>
+            <li>응답하라 (<span>1988</span>)</li>
+        </ul>
+    </body>
+</html>
